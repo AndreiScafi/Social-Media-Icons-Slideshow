@@ -21,18 +21,29 @@ html {
 
 .slideshow-link {
     width: 20%;
+    filter: brightness(.1);
 }
 
-.slideshow-link img {
-    width: 100%;
+.slideshow-link:nth-child(3) {
+    transition: filter .5s;
 }
+
 
 .slideshow-link:nth-child(1),
 .slideshow-link:nth-child(5) {
     transition: width .5s, opacity .5s;
 }
 
+.slideshow-link img {
+    width: 100%;
+}
+
 .faded-out {
     opacity: 0;
     width: 0;
+}
+
+.light {
+    filter: brightness(1);
+    transition: filter .5s;
 }
